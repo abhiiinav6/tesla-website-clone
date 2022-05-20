@@ -1,4 +1,6 @@
 import React from "react";
+import Fade from "react-reveal/Fade";
+
 import styled from "styled-components";
 
 export default function Section({
@@ -10,14 +12,20 @@ export default function Section({
 }) {
   return (
     <Wrap img={bgimg}>
-      <ItemText>
-        <h1>{title}</h1>
-        <p>{description}</p>
-      </ItemText>
+      <Fade bottom>
+        <ItemText>
+          <h1>{title}</h1>
+          <p>{description}</p>
+        </ItemText>
+      </Fade>
       <Buttons>
         <ButtonsGroup>
-          <LeftButton>{leftButtonText}</LeftButton>
-          {rightButtonText && <RightButton>{rightButtonText}</RightButton>}
+          <Fade bottom>
+            <LeftButton>{leftButtonText}</LeftButton>
+          </Fade>
+          <Fade bottom>
+            {rightButtonText && <RightButton>{rightButtonText}</RightButton>}
+          </Fade>
         </ButtonsGroup>
         <DownArrow src="/images/down-arrow.svg" />
       </Buttons>
