@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-
+import "../styles.css";
 export default function Header() {
   return (
     <Container>
@@ -31,6 +31,19 @@ export default function Header() {
           </li>
         </nav>
       </NavBar>
+      <RightMenu>
+        <li className="hiddenOnMobile">
+          <a href="#">Shop</a>
+        </li>
+        <li className="hiddenOnMobile">
+          <a href="#">Account</a>
+        </li>
+        <Menu>
+          <li>
+            <a href="#">Menu</a>
+          </li>
+        </Menu>
+      </RightMenu>
     </Container>
   );
 }
@@ -64,19 +77,39 @@ const NavBar = styled.div`
   @media (max-width: 1024px) {
     display: none;
   }
+  gap: 5px;
   li {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 91px;
     height: 30px;
-    padding: auto 10px;
     font-size: 14px;
     font-weight: 700;
-    fill: #393c41;
+    border-radius: 12px;
+    transition: all 0.5s;
   }
-  li:hover{
-    /* color: black; */
-    background-color: 
+  li:hover {
+    background-color: rgba(20, 21, 21, 0.27);
   }
+`;
+
+const RightMenu = styled(NavBar)`
+  display: flex;
+
+  @media (max-width: 720px) {
+    li {
+      display: none;
+    }
+  }
+`;
+
+const Menu = styled(NavBar)`
+  @media (min-width: 224px) {
+    display: flex;
+    li {
+      display: flex;
+    }
+  }
+  /* display: flex; */
 `;

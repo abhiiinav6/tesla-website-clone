@@ -44,3 +44,9 @@ li {
     transform: translateY(3px);
   }
 }
+
+@media (max-width: 720px) {
+  .hiddenOnMobile {
+    display: none;
+  }
+}
