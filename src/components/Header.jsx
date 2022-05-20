@@ -107,6 +107,16 @@ export default function Header() {
         <li>
           <a href="#">More</a>
         </li>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui quisquam
+        ullam harum nostrum, eos ipsa reiciendis sit repudiandae rem natus,
+        autem numquam asperiores amet eveniet dolore. Eaque doloribus fugiat
+        deserunt reprehenderit? Dolore sunt, esse ab sed ullam rem laudantium
+        quos iure officia nihil vel dicta unde harum excepturi pariatur id
+        temporibus nostrum. Voluptas mollitia eos ducimus adipisci dolor placeat
+        veritatis eius, totam natus a incidunt aliquid quia, tempore cupiditate.
+        Eius, nulla veniam. Est velit a atque. Aspernatur ab illum fuga aut nisi
+        deleniti autem omnis aliquam, at labore debitis vitae tempora magnam
+        veniam iste nesciunt porro! Omnis optio exercitationem alias?
       </BurgerNavBar>
     </Container>
   );
@@ -120,6 +130,7 @@ const Container = styled.div`
   padding: 0 32px;
   display: flex;
   justify-content: space-between;
+  z-index: 999;
 `;
 
 const Logo = styled.div`
@@ -183,7 +194,7 @@ const BurgerNavBar = styled.div`
   transform: ${(props) => (props.open ? `translateX(0)` : `translateX(100%)`)};
   display: flex;
   flex-direction: column;
-  width: 250px;
+  width: 300px;
   min-height: 100vh;
   position: fixed;
   background-color: white;
